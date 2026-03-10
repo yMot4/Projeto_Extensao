@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: calc(100vh - 30px);
+    background-color: #111111;
+}
+
+.base {
+    height: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(24, 24, 24);
+}
+
+nav img {
+    position: absolute;
+    height: 55px;
+    left: 15px;
+}
+
+nav ul {
+    height: 55px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: aliceblue;
+    background-image: url("assets/papel.jpg");
+}
+
+.card-perso {
+    height: 80%;
+    width: 500px;
+    border-radius: 20px;
+    background: 
+    linear-gradient(to bottom, transparent, #000000de), 
+    url('assets/VELARIS TENEBRIS.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    gap: 15px;
+}
+
+.card-npc {
+    height: 80%;
+    width: 500px;
+    background: 
+    linear-gradient(to bottom, transparent, #000000de), 
+    url('assets/npcs_2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.card-camp {
+    height: 80%;
+    width: 500px;
+    background: 
+    linear-gradient(to bottom, transparent, #000000de), 
+    url("assets/camp-back.avif");
+    background-size: cover;
+    background-position: center;
+    background-position: -400px;
+    border-radius: 20px;
+}
+
+main a {
+    text-decoration: none;
+    height: 50px;
+
+}
+.button-view {
+    border: solid 2px aliceblue;
+    border-radius: 3px;
+    color: aliceblue;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.button-create {
+    border: solid 2px aliceblue;
+    border-radius: 3px;
+    color: aliceblue;
+    background-color: #32a5f2;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
