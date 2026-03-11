@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/animations.min.css" rel="stylesheet">
     <link rel="stylesheet" href="home_page.css">
     <title>Home Page</title>
 </head>
@@ -11,26 +15,59 @@
 <body>
     <div class="base">
         <nav>
-            <img src="assets\logo.png"
-                alt="logo">
             <ul>
+                <li><img src="assets\logo.png" alt="logo"></li>
                 <li><a href="">HOME</a></li>
                 <li><a href="">PERSONAGENS</a></li>
                 <li><a href="">NPCS</a></li>
                 <li><a href="">CAMPANHAS</a></li>
+                <li><a href=""><i class="bxl bx-github"></i></a></li>
+                <li><a href=""><i class="bxl bx-linkedin-square"></i></a></li>
             </ul>
         </nav>
         <main>
-            <div class="card-perso">
-                <a href="">
-                    <div class="button-view">GALERIA</div>
-                </a>
-                <a href="">
-                    <div class="button-create">CRIAR</div>
-                </a>
+            <div class="banner"></div>
+            <div class="cards">
+                <div class="card-perso">
+                    <div class="card-info">
+                        <h1>PERSONAGENS</h1>
+                        <div class="card-buttons">
+                            <a href="">
+                                <div class="button-view"><i class="bx bx-folder-open"></i>GALERIA</div>
+                            </a>
+                            <a href="">
+                                <div class="button-create"><i class="bx bx-plus "></i>CRIAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-npc">
+                    <div class="card-info">
+                        <h1>NPCS</h1>
+                        <div class="card-buttons">
+                            <a href="">
+                                <div class="button-view"><i class="bx bx-folder-open"></i>GALERIA</div>
+                            </a>
+                            <a href="">
+                                <div class="button-create"><i class="bx bx-plus"></i>CRIAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-camp">
+                    <div class="card-info">
+                        <h1>CAMPANHAS</h1>
+                        <div class="card-buttons">
+                            <a href="">
+                                <div class="button-view"><i class="bx bx-folder-open"></i>GALERIA</div>
+                            </a>
+                            <a href="">
+                                <div class="button-create"><i class="bx bx-plus"></i>CRIAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-npc"></div>
-            <div class="card-camp"></div>
         </main>
     </div>
 </body>

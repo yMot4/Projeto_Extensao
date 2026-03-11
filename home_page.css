@@ -1,11 +1,17 @@
+@font-face {
+    font-family: "Dnd";
+    src: url("fonts/Bookinsanity.otf"), format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: calc(100vh - 30px);
+    height: fit-content;
     background-color: #111111;
+    font-family: "Dnd";
 }
 
 .base {
@@ -22,9 +28,7 @@ nav {
 }
 
 nav img {
-    position: absolute;
     height: 55px;
-    left: 15px;
 }
 
 nav ul {
@@ -40,16 +44,40 @@ nav ul {
 li a {
     text-decoration: none;
     color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+li i {
+    font-size: largee;
+    color: aliceblue;
 }
 
 main {
-    height: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("assets/papel.jpg");
+    background-size: cover;
+}
+
+.banner {
+    background-color: #2a96de;
+    height: 800px;
+    width: 100%;
+    background-image: url("assets/camp-back.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cards {
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: aliceblue;
-    background-image: url("assets/papel.jpg");
 }
 
 .card-perso {
@@ -62,7 +90,9 @@ main {
     background-size: cover;
     background-position: center;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 
 .card-npc {
@@ -74,6 +104,10 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .card-camp {
@@ -81,18 +115,63 @@ main {
     width: 500px;
     background: 
     linear-gradient(to bottom, transparent, #000000de), 
-    url("assets/camp-back.avif");
+    url("assets/dragons.png");
     background-size: cover;
     background-position: center;
-    background-position: -400px;
+    background-position: -200px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
+.card-perso::before,
+.card-npc::before,
+.card-camp::before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.card-perso:hover::before,
+.card-npc:hover::before,
+.card-camp:hover::before {
+    left: 125%;
+    transition: all 0.7s ease;
+}
 main a {
     text-decoration: none;
-    height: 50px;
-
 }
+
+.card-info {
+    color: aliceblue;
+    margin-top: auto;
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.card-info h1 {
+    margin-bottom: 10px;
+}
+.card-buttons {
+    height: fit-content;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
 .button-view {
     border: solid 2px aliceblue;
     border-radius: 3px;
@@ -103,10 +182,11 @@ main a {
     align-items: center;
     justify-content: center;
     font-size: large;
+    gap: 5px;
 }
 
 .button-create {
-    border: solid 2px aliceblue;
+    border: solid 2px #2a96de;
     border-radius: 3px;
     color: aliceblue;
     background-color: #32a5f2;
@@ -116,4 +196,5 @@ main a {
     align-items: center;
     justify-content: center;
     font-size: large;
+    gap: 5px;
 }
