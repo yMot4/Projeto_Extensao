@@ -1,30 +1,52 @@
+@font-face {
+    font-family: "Dnd";
+    src: url("fonts/Bookinsanity.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dnd";
+    src: url("fonts/Bookinsanity Bold.otf");
+    font-style: normal;
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    height: calc(100vh - 30px);
-    background-color: #111111;
+    height: fit-content;
+    background-color: #11171a;
+    font-family: "Dnd";
 }
 
 .base {
-    height: 100%;
+    padding-top: 35px;
+    height: fit-content;
     margin: 15px;
     display: flex;
     flex-direction: column;
 }
 
 nav {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(24, 24, 24);
+    background-color: #232b2f;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    border-bottom: 1px solid #747d7f;
 }
 
 nav img {
-    position: absolute;
     height: 55px;
-    left: 15px;
 }
 
 nav ul {
@@ -39,21 +61,149 @@ nav ul {
 
 li a {
     text-decoration: none;
+    color: #bfcbce;
+    transition: color 0.3s;
+}
+
+li a:hover {
+    color: aliceblue;
+}
+
+li i {
+    font-size: largee;
+    color: #bfcbce;
+    transition: color 0.3s;
+}
+
+li i:hover {
     color: aliceblue;
 }
 
 main {
-    height: 100%;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #12181c;
+    /* background-image: url("assets/papel.jpg"); */
+    background-size: cover;
+}
+
+.banner {
+    height: 800px;
+    width: 100%;
+    background: 
+    linear-gradient(to bottom, transparent, #12181c), 
+    url("assets/camp-back.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.boas-vindas {
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    margin-top: auto;
+    margin-bottom: 250px;
+    margin-left: 300px;
+}
+
+.boas-vindas h1 {
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.boas-vindas p {
+    font-size: 18px;
+    color: #bfcbce;
+}
+
+.link-inicio {
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.botao-inicio {
+    display: inline-block;
+    height: 45px;
+    width: 200px;
+    background-color: #e01c16;
+    color: aliceblue;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-inicio i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    font-size: 25px;
+}
+
+.botao-inicio:hover {
+    background-color: #a11712;
+}
+
+.botao-inicio:hover i {
+    transform: translateX(5px);
+}
+
+.blabla {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #12181c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blabla h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+.highlight {
+    color: #c2bc9f;
+}
+
+.desc {
+    width: 60em;
+    color: #bfcbce;
+    text-align: center;
+    font-size: large;
+}
+
+.cards {
+    height: fit-content;
+    width: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
     gap: 20px;
-    background-color: aliceblue;
-    background-image: url("assets/papel.jpg");
+    background: 
+    linear-gradient(#12181cba), 
+    url('assets/background.jpg');
+    background-size: cover;
+    scroll-margin-top: 200px;
 }
 
 .card-perso {
-    height: 80%;
+    height: 640px;
     width: 500px;
     border-radius: 20px;
     background: 
@@ -62,11 +212,14 @@ main {
     background-size: cover;
     background-position: center;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border: 2px inset #869396;
 }
 
 .card-npc {
-    height: 80%;
+    height: 640px;
     width: 500px;
     background: 
     linear-gradient(to bottom, transparent, #000000de), 
@@ -74,25 +227,77 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 2px inset #869396;
 }
 
 .card-camp {
-    height: 80%;
+    height: 640px;
     width: 500px;
     background: 
     linear-gradient(to bottom, transparent, #000000de), 
-    url("assets/camp-back.avif");
+    url("assets/dragons.png");
     background-size: cover;
     background-position: center;
-    background-position: -400px;
+    background-position: -200px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 2px inset #869396;
+}
+
+.card-perso::before,
+.card-npc::before,
+.card-camp::before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.card-perso:hover::before,
+.card-npc:hover::before,
+.card-camp:hover::before {
+    left: 125%;
+    transition: all 0.7s ease;
 }
 
 main a {
     text-decoration: none;
-    height: 50px;
-
 }
+
+.card-info {
+    color: aliceblue;
+    margin-top: auto;
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.card-info h1 {
+    margin-bottom: 10px;
+}
+.card-buttons {
+    height: fit-content;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
 .button-view {
     border: solid 2px aliceblue;
     border-radius: 3px;
@@ -103,10 +308,11 @@ main a {
     align-items: center;
     justify-content: center;
     font-size: large;
+    gap: 5px;
 }
 
 .button-create {
-    border: solid 2px aliceblue;
+    border: solid 2px #2a96de;
     border-radius: 3px;
     color: aliceblue;
     background-color: #32a5f2;
@@ -116,4 +322,58 @@ main a {
     align-items: center;
     justify-content: center;
     font-size: large;
+    gap: 5px;
+}
+
+.site-footer{
+    background-color: #12181c;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section{
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4{
+  margin-bottom: 15px;
+}
+
+.footer-section a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover{
+  text-decoration: underline;
+}
+
+.footer-section ul{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li{
+  margin-bottom: 8px;
+}
+
+.footer-bottom{
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #bbb;
 }
