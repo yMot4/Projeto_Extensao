@@ -1,0 +1,152 @@
+@font-face {
+    font-family: "Dnd";
+    src: url("../../fonts/Bookinsanity.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dnd";
+    src: url("../../fonts/Bookinsanity Bold.otf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: fit-content;
+    background-color: #11171a;
+    font-family: "Dnd";
+}
+
+.base {
+    padding-top: 40px;
+    height: fit-content;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #232b2f;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    border-bottom: 1px solid #747d7f;
+}
+
+nav img {
+    height: 55px;
+}
+
+nav ul {
+    height: 55px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: #bfcbce;
+    transition: color 0.3s;
+}
+
+li a:hover {
+    color: aliceblue;
+}
+
+li i {
+    font-size: largee;
+    color: #bfcbce;
+    transition: color 0.3s;
+}
+
+li i:hover {
+    color: aliceblue;
+}
+
+main {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1eee3;
+    background-size: cover;
+}
+
+.header-page-create {
+    height: 120px;
+    width: 90%;
+    /* background-color: #e01c16; */
+    background-color: #bb3d43;
+    border-radius: 25px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.header-page-create h1 {
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 50px;
+    flex-grow: 1;
+}
+
+main a {
+    text-decoration: none;
+}
+
+.button-create-perso {
+    color: #bb3d43;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f1eee3;
+    border-radius: 10px;
+    box-shadow: 0 4px black;
+    border: solid 1.5px rgb(42, 42, 42);
+    gap: 5px;
+    margin-right: 20px;
+}
+
+section {
+    height: 800px;
+    width: 90%;
+    background-color: blue;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5em;
+}
+
+.section-gallery {
+    width: 70%;
+    background-color: #bb3d43;
+}
+
+.section-character-bio {
+    width: 30%;
+    background-color: #11171a;
+}
