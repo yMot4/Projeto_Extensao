@@ -70,7 +70,7 @@ li a:hover {
 }
 
 li i {
-    font-size: largee;
+    font-size: large;
     color: #bfcbce;
     transition: color 0.3s;
 }
@@ -135,7 +135,7 @@ main a {
 section {
     height: 800px;
     width: 90%;
-    background-color: blue;
+    /* background-color: blue; */
     box-sizing: border-box;
     display: flex;
     margin-top: 3em;
@@ -144,28 +144,34 @@ section {
 
 .section-gallery {
     width: 70%;
-    background-color: #bb3d43;
+    /* background-color: #bb3d43; */
     box-sizing: border-box;
     padding-right: 2em;
 }
 
 .album {
-    height: 80%;
+    height: 100%;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
 }
 
 .album-header {
     height: 3.5em;
     width: 100%;
-    background-color: #bbb;
+    /* background-color: #bbb; */
     display: flex;
 }
 
-.char-binder-tag {
+.binder-tag {
     height: 100%;
     width: 15em;
     background-color: #444;
+    color: #f1eee3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     clip-path: polygon(
     0% 0%,
     calc(100% - 25px) 0%,
@@ -180,10 +186,74 @@ section {
     background-color: #bb3d43;
 }
 
+.album-content {
+    height: 100%;
+    width: 100%;
+    background-color: #c9c8b9;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    box-shadow: 10px 10px 20px 5px #11171a81;
+}
+
+.album-content::-webkit-scrollbar {
+    background: #f1eee3;
+    border: 2px solid #44444467;
+    border-radius: 5px;
+}
+
+.album-content::-webkit-scrollbar-thumb {
+    background-color: #bb3d43;
+    border-radius: 5px;
+}
+
+.album-content-div {
+    height: fit-content;
+    width: fit-content;
+    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.card {
+    height: 25em;
+    width: 20em;
+    background-color: #bb6b3d;
+    border-radius: 10px;
+}
+
 .section-character-bio {
     width: 30%;
-    background-color: #11171a;
+    /* background-color: #11171a; */
     box-sizing: border-box;
+    border: 2px solid #44444467;
+    border-radius: 10px;
+}
+
+.search-bar-div {
+    height: calc(3.5em - 4px);
+    display: flex;
+    align-items: center;
+    /* background-color: #bb3d43; */
+    border-bottom: 2px solid #44444467;
+    color: #444444d4;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.search-bar-div i {
+    font-size: 1.5em;
+}
+
+.search-bar {
+    font-size: large;
+    margin-left: 0.5em;
+    border: none;
+    background: none;
+    outline: none;
+    color: #444444d4;
 }
 
 .site-footer{
