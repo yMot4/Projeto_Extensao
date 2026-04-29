@@ -27,7 +27,7 @@ body {
 }
 
 .base {
-    padding-top: 35px;
+    padding-top: 40px;
     height: fit-content;
     margin: 15px;
     display: flex;
@@ -70,7 +70,7 @@ li a:hover {
 }
 
 li i {
-    font-size: largee;
+    font-size: large;
     color: #bfcbce;
     transition: color 0.3s;
 }
@@ -87,7 +87,6 @@ main {
     align-items: center;
     justify-content: center;
     background-color: #12181c;
-    /* background-image: url("assets/papel.jpg"); */
     background-size: cover;
 }
 
@@ -143,6 +142,7 @@ main {
     font-family: sans-serif;
     font-weight: bold;
     transition: 0.3s ease;
+    margin-top: 1em;
 }
 
 .botao-inicio i {
