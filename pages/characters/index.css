@@ -160,11 +160,15 @@ section {
 .album-header {
     height: 3.5em;
     width: 100%;
-    /* background-color: #bbb; */
+    background-color: #444;
     display: flex;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px 10px 0 0;
 }
 
-.binder-tag {
+/* .binder-tag {
     height: 100%;
     width: 15em;
     background-color: #444;
@@ -177,29 +181,23 @@ section {
             100% 80%,
             100% 100%,
             0% 100%);
-    border-radius: 10px 0 0 0;
+    border-radius: 5px 0 0 0;
     cursor: pointer;
+    font-family: sans-serif;
 }
 
 .selected-tag {
     background-color: #bb3d43;
-}
+} */
 
 .header-filters {
     height: 100%;
     flex-grow: 1;
-    /* background-color: #bb6b3d; */
     display: flex;
-    box-sizing: border-box;
     align-items: center;
     font-family: sans-serif;
     font-weight: bold;
-    color: #444;
-
-}
-
-.header-filters span {
-    margin-left: 20px;
+    color: #bfcbce;
 }
 
 .album-content {
@@ -215,12 +213,12 @@ section {
 .album-content::-webkit-scrollbar {
     background: #f1eee3;
     border: 2px solid #44444467;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .album-content::-webkit-scrollbar-thumb {
     background-color: #bb3d43;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .album-content-div {
@@ -239,13 +237,39 @@ section {
     border-radius: 10px;
     display: flex;
     box-sizing: border-box;
-    background-image: url("https://i.pinimg.com/control1/1200x/f6/4e/77/f64e77258862d4ed607f3d0f73501d1a.jpg");
+    background: linear-gradient(to bottom, transparent, #000000de),url("https://i.pinimg.com/control1/1200x/f6/4e/77/f64e77258862d4ed607f3d0f73501d1a.jpg");
     background-size: cover;
     border: 10px solid black;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card-selected {
     border: 10px solid #bb3d43;
+}
+
+.card-info {
+    height: 8em;
+    width: 100%;
+    /* background-color: #11171a; */
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info h1 {
+    color: white;
+}
+.card-info p {
+    color: #bfcbce;
+    font-size: small;
+    text-align: center;
 }
 
 .section-character-bio {
@@ -322,6 +346,11 @@ section {
     box-shadow: 10px 10px 30px rgba(28, 28, 28, 0.656);
     box-sizing: border-box;
     border: 10px solid black;
+    transition: transform 0.3s ease;
+}
+
+.portrait-img:hover {
+    transform: scale(1.1);
 }
 
 .title {
